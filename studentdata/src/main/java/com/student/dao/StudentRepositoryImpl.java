@@ -10,7 +10,6 @@
 //public class StudentRepositoryImpl implements StudentRepositoryImp {
 //
 //    @Autowired
-//    private EntityManager entityManager;
 //
 //    @Override
 //    public List<Student> findByFirstName(String firsName) {

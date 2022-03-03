@@ -45,14 +45,14 @@ public class StudentController {
 
 
     //find by year
-    @GetMapping("/students?year=={year}")
-    public ResponseEntity<List<Student>> findByYear(@RequestParam(value = "year") int year) {
-        List<Student> student = studentService.getStudentByYear(year);
-        if (student == null) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-        }
-        return ResponseEntity.of(Optional.of(student));
-    }
+//    @GetMapping("/students?year=={year}")
+//    public ResponseEntity<List<Student>> findByYear(@RequestParam(value = "year") int year) {
+//        List<Student> student = studentService.getStudentByYear(year);
+//        if (student == null) {
+//            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+//        }
+//        return ResponseEntity.of(Optional.of(student));
+//    }
 
     // find by year handler
 //    @GetMapping("/students?year=={year}")
@@ -67,11 +67,11 @@ public class StudentController {
 //    }
 
     //find student by motherName handler
-//    @GetMapping("/students/")
-//    public List<Student> getStudentByMotherName(@RequestParam(value = "mother") String motherName)
-//    {
-//        return studentService.getStudentByMotherName(motherName);
-//    }
+    @GetMapping("/students/")
+    public List<Student> getStudentByMotherName(@RequestParam(value = "motherName") String motherName)
+    {
+        return studentService.getStudentByMotherName(motherName);
+    }
 
     //add students
     @PostMapping("/students")

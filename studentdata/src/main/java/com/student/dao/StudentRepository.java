@@ -20,8 +20,8 @@ public interface StudentRepository extends JpaRepository<Student, Integer> {
 
     public List<Student> findByYear(int year);
 
-    public List<Student> findByMotherName(String motherName);
+//    public List<Student> findByMotherName(String motherName);
 
-//    @Query("select s From  Student s where s.motherName =: s")
-//    public List<Student> getStudentByMotherName(@Param("s") String motherName);
+    @Query("select s FROM Student s where s.motherName =:s")
+    public List<Student> getStudentByMotherName(@Param("s") String motherName);
 }

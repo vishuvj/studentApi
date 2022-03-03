@@ -34,17 +34,17 @@ public class StudentService {
     }
 
     //find by year
-    public List<Student> getStudentByYear(int year) {
-        List<Student> student = null;
-        try {
-                 student = this.studentRepository.findByYear(year);
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        return student;
-    }
+//    public List<Student> getStudentByYear(int year) {
+//        List<Student> student = null;
+//        try {
+//                 student = this.studentRepository.findByYear(year);
+//
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//
+//        return student;
+//    }
 
     //find by year
 //    public List<Student> getStudentByYear(int year) {
@@ -64,9 +64,9 @@ public class StudentService {
 //    }
 
     // find by motherName
-//    public List<Student> getStudentByMotherName(String motherName) {
-//        return studentRepository.findByMotherName(motherName);
-//    }
+    public List<Student> getStudentByMotherName(String motherName) {
+        return studentRepository.getStudentByMotherName(motherName);
+    }
 
     // add students
     public Student addStudent(Student s) {
